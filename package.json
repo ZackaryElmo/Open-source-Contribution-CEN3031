@@ -15,8 +15,8 @@
   },
   "main": "src/index.ts",
   "engines": {
-    "node": ">=20.11.0",
-    "yarn": "^1.22.0"
+    "node": ">=20.9.0",
+    "pnpm": "^8.0.0"
   },
   "scripts": {
     "build": "run-s clean compile",
@@ -28,6 +28,7 @@
     "lint-es:file:fix": "eslint --fix",
     "lint-es:fix": "eslint --fix .",
     "lint:fix": "run-s lint-es:fix prettier-fix",
+    "preinstall": "npx only-allow pnpm", 
     "prepare": "husky install",
     "prettier": "prettier --cache --check --ignore-unknown \"{**/*,*}.*\"",
     "prettier-fix": "prettier --cache --write --ignore-unknown \"{**/*,*}.*\"",
@@ -64,5 +65,5 @@
     "ts-node": "10.9.2",
     "typescript": "5.3.3"
   },
-  "packageManager": "yarn@1.22.21"
+  "packageManager": "pnpm@8.15.1"
 }
